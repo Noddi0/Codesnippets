@@ -75,7 +75,7 @@ else
 if ($stmt = $mysqli->prepare("UPDATE portfolio SET vak = ?, titel = ? , informatie = ?
 WHERE id=?"))
 {
-$stmt->bind_param("ssi", $vak, $titel, $informatie, $id);
+$stmt->bind_param("sssi", $vak, $titel, $informatie, $id);
 $stmt->execute();
 $stmt->close();
 }
